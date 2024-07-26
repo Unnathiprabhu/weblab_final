@@ -1,0 +1,171 @@
+<!-- Program Statement:
+  Write an XHTML document which displays a form containing text elements to 
+  input register number, sub-code, marks in three tests and a button element. 
+  Also write Java script compute the average of two best tests on click of button 
+  and print average marks using alert. Validate all the fields using JavaScript.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="index.js" defer="defer"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Details Form</h1>
+    </header>
+    <main>
+      <form action="/" id="details-form">
+        <ul class="sec">
+          <li>
+            <label for="regno">Register Number (USN)</label>
+            <input type="text" id="regno" required="required" />
+          </li>
+          <li>
+            <label for="subcode">Subject Code</label>
+            <input type="text" id="subcode" required="required" />
+          </li>
+          <li>
+            <label for="marks-1">Test 1 Marks</label>
+            <input type="text" id="marks-1" required="required" />
+          </li>
+          <li>
+            <label for="marks-2">Test 2 Marks</label>
+            <input type="text" id="marks-2" required="required" />
+          </li>
+          <li>
+            <label for="marks-3">Test 3 Marks</label>
+            <input type="text" id="marks-3" required="required" />
+          </li>
+        </ul>
+        <div id="btn-con">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
+
+<!--
+ Sure! Let's go through this XHTML document line by line to understand each part in detail.
+
+### Line-by-Line Explanation
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
+- `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">`: This line declares the document type as XHTML 1.0 Strict. It tells the browser that this document adheres to the strict rules of XHTML, a stricter and cleaner version of HTML.
+
+```html
+<html>
+```
+- `<html>`: This tag starts the HTML document. All other elements will be nested inside this tag.
+
+```html
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="index.js" defer="defer"></script>
+  </head>
+```
+- `<head>`: This section contains meta-information about the document, such as links to stylesheets and scripts.
+  - `<link rel="stylesheet" type="text/css" href="styles.css" />`: This line links to an external CSS file named `styles.css` for styling the document.
+  - `<script src="index.js" defer="defer"></script>`: This line links to an external JavaScript file named `index.js`. The `defer` attribute ensures that the script will be executed after the document has been fully parsed.
+
+```html
+  <body>
+    <header>
+      <h1>Details Form</h1>
+    </header>
+```
+- `<body>`: This section contains the content of the HTML document that will be displayed in the browser.
+  - `<header>`: This section typically contains introductory content or navigational links.
+    - `<h1>Details Form</h1>`: This is a heading element that displays "Details Form" as a large, bold title.
+
+```html
+    <main>
+      <form action="/" id="details-form">
+        <ul class="sec">
+```
+- `<main>`: This section contains the main content of the document.
+  - `<form action="/" id="details-form">`: This element creates a form for user input. The `action` attribute specifies the URL where the form data will be sent when submitted (currently set to the root URL `/`). The `id` attribute assigns a unique identifier to the form for styling and scripting purposes.
+    - `<ul class="sec">`: This creates an unordered list. The `class` attribute assigns a class name to the list for styling purposes.
+
+```html
+          <li>
+            <label for="regno">Register Number (USN)</label>
+            <input type="text" id="regno" required="required" />
+          </li>
+```
+- `<li>`: This tag represents a list item.
+  - `<label for="regno">Register Number (USN)</label>`: This element provides a label for the input field with `id="regno"`. The `for` attribute links the label to the input field, improving accessibility.
+  - `<input type="text" id="regno" required="required" />`: This creates a text input field for the register number. The `id` attribute assigns a unique identifier to the input field, and the `required` attribute ensures the field must be filled out before form submission.
+
+```html
+          <li>
+            <label for="subcode">Subject Code</label>
+            <input type="text" id="subcode" required="required" />
+          </li>
+```
+- This section is similar to the previous one but for the Subject Code input field.
+  - `<label for="subcode">Subject Code</label>`: Label for the input field with `id="subcode"`.
+  - `<input type="text" id="subcode" required="required" />`: Text input field for the subject code.
+
+```html
+          <li>
+            <label for="marks-1">Test 1 Marks</label>
+            <input type="text" id="marks-1" required="required" />
+          </li>
+```
+- This section is for the Test 1 Marks input field.
+  - `<label for="marks-1">Test 1 Marks</label>`: Label for the input field with `id="marks-1"`.
+  - `<input type="text" id="marks-1" required="required" />`: Text input field for the marks of Test 1.
+
+```html
+          <li>
+            <label for="marks-2">Test 2 Marks</label>
+            <input type="text" id="marks-2" required="required" />
+          </li>
+```
+- This section is for the Test 2 Marks input field.
+  - `<label for="marks-2">Test 2 Marks</label>`: Label for the input field with `id="marks-2"`.
+  - `<input type="text" id="marks-2" required="required" />`: Text input field for the marks of Test 2.
+
+```html
+          <li>
+            <label for="marks-3">Test 3 Marks</label>
+            <input type="text" id="marks-3" required="required" />
+          </li>
+```
+- This section is for the Test 3 Marks input field.
+  - `<label for="marks-3">Test 3 Marks</label>`: Label for the input field with `id="marks-3"`.
+  - `<input type="text" id="marks-3" required="required" />`: Text input field for the marks of Test 3.
+
+```html
+        </ul>
+        <div id="btn-con">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
+```
+- `</ul>`: Closes the unordered list.
+- `<div id="btn-con">`: Creates a div (a block-level container element) with the ID `btn-con`.
+  - `<button type="submit" class="btn">Submit</button>`: Creates a submit button. The `type="submit"` attribute specifies that this button submits the form. The `class="btn"` attribute assigns a class name to the button for styling purposes.
+- `</div>`: Closes the div.
+- `</form>`: Closes the form.
+- `</main>`: Closes the main section.
+- `</body>`: Closes the body of the document.
+- `</html>`: Closes the HTML document.
+
+### Summary
+
+This XHTML document creates a form with input fields for:
+- Register Number (USN)
+- Subject Code
+- Marks for three tests
+
+It also includes a submit button to submit the form. The form uses labels for accessibility and requires all fields to be filled out before submission. The form and its elements are styled using an external CSS file (`styles.css`), and form validation or other functionalities will be handled by an external JavaScript file (`index.js`).   
+-->

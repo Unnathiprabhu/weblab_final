@@ -1,0 +1,331 @@
+.cal {
+    padding: 2%;
+    border-radius: 1.5em;
+    height: 500px;
+    width: 550px;
+    background-color: #d8d9da;
+    border: 3px black solid;
+    box-shadow: #6b77ad 0 40px 25px -25px;
+  }
+  
+  .cal tr td {
+      width:25%;
+    padding: 1%;
+  }
+  
+  .display-box {
+    background-color: white;
+    border: solid black 0.5px;
+    color: black;
+    border-radius: 5px;
+    width: 98%;
+    height: 65%;
+    text-align: right;
+    box-shadow:  black 0.5px 1px 6px 2px;
+  }
+  
+  
+  
+  .display-box {
+      font-size:25px;
+  }
+  
+  .display-box input {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    border: none;
+    background-color: #dcdbe1;
+  }
+  ::placeholder{
+      text-align: center;
+  }
+  input[type=button] {
+    background-color: #394867;
+    color: white;
+    border: solid black 0.5px;
+    border-radius: 5px;
+    width:100%;
+    height: 70%;
+    font-size: 20px;
+    padding:5%;
+    border-radius: 25%;
+    cursor: pointer;
+    box-shadow: black 0px 1.5px 3px 1px;
+    transition: 0.3s;
+    margin: 0.5%;
+  }
+  
+  input[type=button]:hover {
+    background-color: #0058fb;
+  }
+  input[type=button]:active {
+    color: #0058fb;
+    background-color: #90abde;
+    transform: translateY(10%);
+    box-shadow: #dcdbe1 0px 0px 0px 0px;
+  }
+  
+  #btn {
+    background-color: #a76f6f;
+  }
+  
+  #btn:hover{
+      background-color: #ff4301;
+  }
+  
+  #btn:active{
+      color: #ff4301;
+      background-color: #fbdcc4;
+  }
+  
+  #sub{
+      background-color: #5c8374;
+  }
+  
+  
+  #sub:hover{
+      background-color: #03c988;
+  }
+  
+  #sub:active{
+      color: #03c988;
+      background-color: #93d1c6;
+  }
+  
+  .clear {
+    height: 80%;
+    font-size: 20px;
+    padding:6%;
+    border-radius: 25%;
+  }
+  .clear:child{
+      padding: 2px;
+  }
+  /* Let's break down the CSS code line by line to understand how it styles the calculator.
+
+### CSS Code Explanation
+
+#### Styling the Calculator Table
+
+```css
+.cal {
+  padding: 2%;
+  border-radius: 1.5em;
+  height: 500px;
+  width: 550px;
+  background-color: #d8d9da;
+  border: 3px black solid;
+  box-shadow: #6b77ad 0 40px 25px -25px;
+}
+```
+
+- `.cal`: Targets the table with the class `cal` used for the calculator layout.
+  - `padding: 2%`: Adds 2% padding inside the table.
+  - `border-radius: 1.5em`: Rounds the corners of the table by 1.5em.
+  - `height: 500px`: Sets the height of the table to 500 pixels.
+  - `width: 550px`: Sets the width of the table to 550 pixels.
+  - `background-color: #d8d9da`: Sets the background color of the table to a light gray.
+  - `border: 3px black solid`: Adds a solid black border of 3 pixels.
+  - `box-shadow: #6b77ad 0 40px 25px -25px`: Adds a shadow effect with specified color and offsets.
+
+```css
+.cal tr td {
+  width: 25%;
+  padding: 1%;
+}
+```
+
+- `.cal tr td`: Targets the table cells (`td`) inside the calculator table.
+  - `width: 25%`: Sets the width of each cell to 25% of the table width.
+  - `padding: 1%`: Adds 1% padding inside each cell.
+
+#### Styling the Display Box
+
+```css
+.display-box {
+  background-color: white;
+  border: solid black 0.5px;
+  color: black;
+  border-radius: 5px;
+  width: 98%;
+  height: 65%;
+  text-align: right;
+  box-shadow: black 0.5px 1px 6px 2px;
+}
+```
+
+- `.display-box`: Targets the input element used as the display box.
+  - `background-color: white`: Sets the background color to white.
+  - `border: solid black 0.5px`: Adds a 0.5px solid black border.
+  - `color: black`: Sets the text color to black.
+  - `border-radius: 5px`: Rounds the corners by 5 pixels.
+  - `width: 98%`: Sets the width to 98% of the parent element.
+  - `height: 65%`: Sets the height to 65% of the parent element.
+  - `text-align: right`: Aligns the text to the right.
+  - `box-shadow: black 0.5px 1px 6px 2px`: Adds a shadow effect with specified color and offsets.
+
+```css
+.display-box {
+  font-size: 25px;
+}
+```
+
+- `.display-box`: Specifies additional styles for the display box.
+  - `font-size: 25px`: Sets the font size to 25 pixels.
+
+```css
+.display-box input {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  border: none;
+  background-color: #dcdbe1;
+}
+```
+
+- `.display-box input`: Targets the input element inside the display box.
+  - `width: 100%`: Sets the width to 100% of the parent element.
+  - `height: 100%`: Sets the height to 100% of the parent element.
+  - `text-align: right`: Aligns the text to the right.
+  - `border: none`: Removes the border.
+  - `background-color: #dcdbe1`: Sets the background color to a light gray.
+
+```css
+::placeholder {
+  text-align: center;
+}
+```
+
+- `::placeholder`: Targets the placeholder text inside input elements.
+  - `text-align: center`: Centers the placeholder text.
+
+#### Styling the Buttons
+
+```css
+input[type=button] {
+  background-color: #394867;
+  color: white;
+  border: solid black 0.5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 70%;
+  font-size: 20px;
+  padding: 5%;
+  border-radius: 25%;
+  cursor: pointer;
+  box-shadow: black 0px 1.5px 3px 1px;
+  transition: 0.3s;
+  margin: 0.5%;
+}
+```
+
+- `input[type=button]`: Targets all buttons.
+  - `background-color: #394867`: Sets the background color to a dark blue.
+  - `color: white`: Sets the text color to white.
+  - `border: solid black 0.5px`: Adds a 0.5px solid black border.
+  - `border-radius: 5px`: Rounds the corners by 5 pixels.
+  - `width: 100%`: Sets the width to 100% of the parent element.
+  - `height: 70%`: Sets the height to 70% of the parent element.
+  - `font-size: 20px`: Sets the font size to 20 pixels.
+  - `padding: 5%`: Adds 5% padding inside the button.
+  - `border-radius: 25%`: Rounds the corners by 25% (this overrides the previous `border-radius`).
+  - `cursor: pointer`: Changes the cursor to a pointer when hovering over the button.
+  - `box-shadow: black 0px 1.5px 3px 1px`: Adds a shadow effect with specified color and offsets.
+  - `transition: 0.3s`: Adds a transition effect with a duration of 0.3 seconds.
+  - `margin: 0.5%`: Adds a 0.5% margin outside the button.
+
+```css
+input[type=button]:hover {
+  background-color: #0058fb;
+}
+```
+
+- `input[type=button]:hover`: Styles the buttons when hovered over.
+  - `background-color: #0058fb`: Changes the background color to a lighter blue.
+
+```css
+input[type=button]:active {
+  color: #0058fb;
+  background-color: #90abde;
+  transform: translateY(10%);
+  box-shadow: #dcdbe1 0px 0px 0px 0px;
+}
+```
+
+- `input[type=button]:active`: Styles the buttons when they are active (clicked).
+  - `color: #0058fb`: Changes the text color to blue.
+  - `background-color: #90abde`: Changes the background color to a light blue.
+  - `transform: translateY(10%)`: Moves the button down by 10%.
+  - `box-shadow: #dcdbe1 0px 0px 0px 0px`: Removes the shadow.
+
+#### Additional Styles for Specific Buttons
+
+```css
+#btn {
+  background-color: #a76f6f;
+}
+
+#btn:hover {
+  background-color: #ff4301;
+}
+
+#btn:active {
+  color: #ff4301;
+  background-color: #fbdcc4;
+}
+```
+
+- `#btn`: Targets the button with the ID `btn` (used for Clear and Delete buttons).
+  - `background-color: #a76f6f`: Sets the background color to a light red.
+- `#btn:hover`: Styles the `btn` button when hovered over.
+  - `background-color: #ff4301`: Changes the background color to orange.
+- `#btn:active`: Styles the `btn` button when active.
+  - `color: #ff4301`: Changes the text color to orange.
+  - `background-color: #fbdcc4`: Changes the background color to a light peach.
+
+```css
+#sub {
+  background-color: #5c8374;
+}
+
+#sub:hover {
+  background-color: #03c988;
+}
+
+#sub:active {
+  color: #03c988;
+  background-color: #93d1c6;
+}
+```
+
+- `#sub`: Targets the button with the ID `sub` (used for the Equal button).
+  - `background-color: #5c8374`: Sets the background color to green.
+- `#sub:hover`: Styles the `sub` button when hovered over.
+  - `background-color: #03c988`: Changes the background color to a lighter green.
+- `#sub:active`: Styles the `sub` button when active.
+  - `color: #03c988`: Changes the text color to a lighter green.
+  - `background-color: #93d1c6`: Changes the background color to a light green.
+
+```css
+.clear {
+  height: 80%;
+  font-size: 20px;
+  padding: 6%;
+  border-radius: 25%;
+}
+```
+
+- `.clear`: Targets elements with the class `clear`.
+  - `height: 80%`: Sets the height to 80% of the parent element.
+  - `font-size: 20px`: Sets the font size to 20 pixels.
+  - `padding: 6%`: Adds 6% padding inside the element.
+  - `border-radius: 25%`: Rounds the corners by 25%.
+
+```css
+.clear:child {
+  padding: 2px;
+}
+```
+
+- `.clear:child`: Targets child elements of elements*/

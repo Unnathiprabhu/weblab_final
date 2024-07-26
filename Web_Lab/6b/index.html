@@ -1,0 +1,376 @@
+<!-- Program Statement:
+  Create your resume using HTML tags also experiment with colors, text (bold, 
+  italic and different headings), image, link, size and also other related tags
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+    font-family: sans-serif;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+  }
+  
+  #sec-1 {
+    width: 50%;
+  }
+  
+  #sec-2 {
+    width: 25%;
+  }
+  
+  h1 {
+    font-size: 60px;
+    margin: 0;
+  }
+  
+  section p, .degree{
+    color: rgb(45, 44, 44);
+    font-size: 17px;
+    font-style: italic;
+  }
+  
+  h3 {
+    font-size: 22px;
+    color: rgb(26, 26, 151);
+  }
+  
+  h4 {
+    font-size: 18px;
+    margin: 15px 0px;
+  }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Resume</title>
+  </head>
+  <body>
+    <main>
+      <section id="sec-1">
+        <img
+          alt="My Photo"
+          class="myPhoto"
+          src="https://avatar.iran.liara.run/public/girl"
+          width="25%"
+          height="10%"
+          style="border-radius: 50%;"
+        />
+        <h1>Unnathi Prabhu</h1>
+        <div>
+            <address>
+              <p>#17 Ramakrishna Nagar </p>
+              <p>I block, vasu layout</p>
+              <p>Mysuru - 570022</p>
+            </address>
+            <p>+91 9148466270</p>
+            <address>prabhu.unnathi@gmail.com</address>
+            <p>On Github as: Unnathiprabhu</p>
+          </div>
+          <br/>
+        <p>
+          Passionate about Computer Science and Programming, Quick Learner,
+          Interested in Problem solving
+        </p>
+        <br />
+        <div>
+          <h3>Education</h3>
+          <div>
+            <h4>Sri Jayachamrajendra Engineering College (SJCE), Mysuru</h4>
+            <p class="degree">B.E in Computer Science</p>
+            <p>Expected year of Graduation - 2025</p>
+            <p>Currently Pursuing</p>
+            <p>Current CGPA - 9.369 / 10</p>
+          </div>
+          <div>
+            <h4>Vijaya Vittala Composite PU college, Mysuru</h4>
+            <p class="degree">Second P.U.</p>
+            <p>Passed Second PU in 2021</p>
+            <p>Board - Department of Pre University Education, Karnataka</p>
+            <p>Score - 97.5% </p>
+          </div>
+        </div>
+        <div>
+          <h3>Projects</h3>
+          <div>
+            <h4>Pharmacy Management System</h4>
+            <p>
+              A simple pharmacy management system, built using Python and SQLite
+              as the RDBMS, with an user friendly GUI.
+            </p>
+          </div>
+          <div>
+            <h4>Simple Online Shop</h4>
+            <p>
+              A simple online shop built using HTML, CSS and JavaScript for the
+              frontend and NodeJS for the backend.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h3>Additional</h3>
+          <ul>
+            <li>Attended a workshop on Cloud Computing</li>
+            <li>Member of College's only art and literary club called The Editorial Board which is responsible bringing out the college's magazine called 'JAYZINE'</li>
+            <li>Attended a workshop on Cloud Computing</li>
+          </ul>
+        </div>
+      </section>
+      <section id="sec-2">
+        
+        <div>
+          <h3>Skills</h3>
+          <ul class="skill-list">
+            <li>Data Structures & Algorithms</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>MongoDB</li>
+            <li>HTML, CSS and JavaScript</li>
+            <li>React</li>
+            <li>NodeJS and Express</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul class="lang-list">
+            <li>Kannada</li>
+            <li>English</li>
+            <li>Hindi</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!--
+    Let's go through this resume HTML code line by line, explaining each part in detail.
+
+### HTML Document Structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+```
+
+- `<!DOCTYPE html>`: This declaration defines the document type and version of HTML being used, which is HTML5 in this case.
+- `<html lang="en">`: The `<html>` tag is the root element of an HTML document. The `lang="en"` attribute specifies the language of the document's content as English.
+
+### Head Section
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Resume</title>
+</head>
+```
+
+- `<head>`: The head section contains meta-information about the document.
+- `<meta charset="UTF-8" />`: Sets the character encoding for the HTML document to UTF-8, which supports all characters and symbols.
+- `<meta http-equiv="X-UA-Compatible" content="IE=edge" />`: Ensures the document is rendered with the highest standards mode in Internet Explorer.
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`: Sets the viewport to make the webpage responsive on different devices.
+- `<link rel="stylesheet" href="styles.css" />`: Links to an external CSS file named `styles.css` for styling the document.
+- `<title>Resume</title>`: Sets the title of the document, which appears in the browser tab.
+
+### Body Section
+
+```html
+<body>
+  <main>
+    <section id="sec-1">
+```
+
+- `<body>`: The body section contains the content of the HTML document that is displayed to the user.
+- `<main>`: This tag specifies the main content of the document.
+- `<section id="sec-1">`: Defines a section of the document. The `id="sec-1"` attribute uniquely identifies this section.
+
+### Personal Information
+
+```html
+<img alt="My Photo" class="myPhoto" src="https://avatar.iran.liara.run/public/girl" width="10%" height="10%" />
+<h1>Unnathi Prabhu</h1>
+```
+
+- `<img>`: Embeds an image in the document.
+  - `alt="My Photo"`: Provides alternative text for the image.
+  - `class="myPhoto"`: Assigns a CSS class for styling.
+  - `src="https://avatar.iran.liara.run/public/girl"`: Specifies the image source URL.
+  - `width="10%" height="10%"`: Sets the image size to 10% of its original dimensions.
+- `<h1>Unnathi Prabhu</h1>`: Defines a top-level heading with the name "Unnathi Prabhu".
+
+### Contact Information
+
+```html
+<div>
+  <address>
+    <p>#17 Ramakrishna Nagar </p>
+    <p>I block, vasu layout</p>
+    <p>Mysuru - 570022</p>
+  </address>
+  <p>+91 9148466270</p>
+  <address>prabhu.unnathi@gmail.com</address>
+  <p>On Github as: Unnathiprabhu</p>
+</div>
+<br/>
+```
+
+- `<div>`: A container element used to group content.
+- `<address>`: Provides contact information. It is used twice here to semantically differentiate postal address and email address.
+- `<p>`: Paragraph elements containing address, phone number, email, and GitHub username.
+- `<br/>`: Inserts a line break for spacing.
+
+### Personal Statement
+
+```html
+<p>
+  Passionate about Computer Science and Programming, Quick Learner,
+  Interested in Problem solving
+</p>
+<br />
+```
+
+- `<p>`: A paragraph element with a brief personal statement.
+- `<br />`: Another line break for spacing.
+
+### Education Section
+
+```html
+<div>
+  <h3>Education</h3>
+  <div>
+    <h4>Sri Jayachamrajendra Engineering College (SJCE), Mysuru</h4>
+    <p class="degree">B.E in Computer Science</p>
+    <p>Expected year of Graduation - 2025</p>
+    <p>Currently Pursuing</p>
+    <p>Current CGPA - 9.369 / 10</p>
+  </div>
+  <div>
+    <h4>Vijaya Vittala Composite PU college, Mysuru</h4>
+    <p class="degree">Second P.U.</p>
+    <p>Passed Second PU in 2021</p>
+    <p>Board - Department of Pre University Education, Karnataka</p>
+    <p>Score - 97.5% </p>
+  </div>
+</div>
+```
+
+- `<h3>Education</h3>`: A subheading for the education section.
+- `<div>`: Containers for each educational institution.
+- `<h4>`: Subheadings for each institution.
+- `<p class="degree">`: Paragraphs with a CSS class `degree` for styling degree information.
+- Other `<p>` elements contain details about the education.
+
+### Projects Section
+
+```html
+<div>
+  <h3>Projects</h3>
+  <div>
+    <h4>Pharmacy Management System</h4>
+    <p>
+      A simple pharmacy management system, built using Python and SQLite
+      as the RDBMS, with an user friendly GUI.
+    </p>
+  </div>
+  <div>
+    <h4>Simple Online Shop</h4>
+    <p>
+      A simple online shop built using HTML, CSS and JavaScript for the
+      frontend and NodeJS for the backend.
+    </p>
+  </div>
+</div>
+```
+
+- `<h3>Projects</h3>`: A subheading for the projects section.
+- `<div>`: Containers for each project.
+- `<h4>`: Subheadings for each project.
+- `<p>`: Paragraphs containing project descriptions.
+
+### Additional Section
+
+```html
+<div>
+  <h3>Additional</h3>
+  <ul>
+    <li>Attended a workshop on Cloud Computing</li>
+    <li>Member of College's only art and literary club called The Editorial Board which is responsible bringing out the college's magazine called 'JAYZINE'</li>
+    <li>Attended a workshop on Cloud Computing</li>
+  </ul>
+</div>
+```
+
+- `<h3>Additional</h3>`: A subheading for the additional section.
+- `<ul>`: Unordered list containing additional information.
+- `<li>`: List items with additional details.
+
+### Skills Section
+
+```html
+<section id="sec-2">
+  <div>
+    <h3>Skills</h3>
+    <ul class="skill-list">
+      <li>Data Structures & Algorithms</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>MongoDB</li>
+      <li>HTML, CSS and JavaScript</li>
+      <li>React</li>
+      <li>NodeJS and Express</li>
+      <li>C</li>
+      <li>C++</li>
+      <li>Java</li>
+    </ul>
+  </div>
+```
+
+- `<section id="sec-2">`: Another section with a unique ID.
+- `<h3>Skills</h3>`: A subheading for the skills section.
+- `<ul class="skill-list">`: Unordered list with a CSS class `skill-list` for styling.
+- `<li>`: List items containing skills.
+
+### Languages Section
+
+```html
+  <div>
+    <h3>Languages</h3>
+    <ul class="lang-list">
+      <li>Kannada</li>
+      <li>English</li>
+      <li>Hindi</li>
+    </ul>
+  </div>
+</section>
+```
+
+- `<h3>Languages</h3>`: A subheading for the languages section.
+- `<ul class="lang-list">`: Unordered list with a CSS class `lang-list` for styling.
+- `<li>`: List items containing languages.
+
+### Closing Tags
+
+```html
+</main>
+</body>
+</html>
+```
+
+- `</main>`: Closes the main content section.
+- `</body>`: Closes the body section.
+- `</html>`: Closes the HTML document.
+
+This HTML document provides a well-structured and detailed resume using various HTML tags to create sections, lists, images, and text formatting.
+-->

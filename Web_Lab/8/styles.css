@@ -1,0 +1,218 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(231, 175, 236);
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  main {
+    margin: 50px 200px;
+  }
+  
+  form, #received-container {
+    background-color: rgb(241, 202, 244);
+    border-radius: 10px;
+    margin: 50px;
+    padding: 20px 50px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  input {
+    display: block;
+    margin: 10px 0px;
+    border: none;
+    width: 75%;
+    border-bottom: solid black 1px;
+    background-color: rgb(253, 233, 255);
+    padding: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  #btn-con {
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 10px 25px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: rgb(224, 120, 212);
+    border: solid 2px rgb(224, 120, 212);
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  #received-container {
+    display: none;
+    text-align: center;
+  }
+  
+  #received-container textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    resize: none;
+    border-radius: 8px;
+  }
+  /*
+  Sure! Let's go through this CSS code line by line to understand what each part does and how it affects the HTML elements.
+
+### Line-by-Line Explanation
+
+```css
+body {
+  font-family: sans-serif;
+  background-color: rgb(231, 175, 236);
+}
+```
+- `body`: This selector targets the `<body>` element of the HTML document.
+  - `font-family: sans-serif;`: Sets the font family of the text within the body to sans-serif.
+  - `background-color: rgb(231, 175, 236);`: Sets the background color of the body to a light purple color using RGB values.
+
+```css
+header {
+  text-align: center;
+}
+```
+- `header`: This selector targets the `<header>` element.
+  - `text-align: center;`: Centers the text inside the header.
+
+```css
+main {
+  margin: 50px 200px;
+}
+```
+- `main`: This selector targets the `<main>` element.
+  - `margin: 50px 200px;`: Adds a margin of 50 pixels at the top and bottom and 200 pixels at the left and right, creating space around the main content.
+
+```css
+form, #received-container {
+  background-color: rgb(241, 202, 244);
+  border-radius: 10px;
+  margin: 50px;
+  padding: 20px 50px;
+}
+```
+- `form, #received-container`: This selector targets both the `<form>` element and the element with the ID `received-container`.
+  - `background-color: rgb(241, 202, 244);`: Sets the background color to a lighter purple color.
+  - `border-radius: 10px;`: Rounds the corners of the elements by 10 pixels.
+  - `margin: 50px;`: Adds a 50-pixel margin around the elements.
+  - `padding: 20px 50px;`: Adds 20 pixels of padding at the top and bottom and 50 pixels at the left and right inside the elements.
+
+```css
+ul {
+  list-style: none;
+}
+```
+- `ul`: This selector targets all `<ul>` elements (unordered lists).
+  - `list-style: none;`: Removes the default bullet points from the list items.
+
+```css
+input {
+  display: block;
+  margin: 10px 0px;
+  border: none;
+  width: 75%;
+  border-bottom: solid black 1px;
+  background-color: rgb(253, 233, 255);
+  padding: 5px;
+}
+```
+- `input`: This selector targets all `<input>` elements.
+  - `display: block;`: Makes the input elements block-level, causing them to take up the full width available and start on a new line.
+  - `margin: 10px 0px;`: Adds 10 pixels of margin at the top and bottom and no margin at the left and right.
+  - `border: none;`: Removes the default border of the input elements.
+  - `width: 75%;`: Sets the width of the input elements to 75% of the container's width.
+  - `border-bottom: solid black 1px;`: Adds a 1-pixel solid black border at the bottom of the input elements.
+  - `background-color: rgb(253, 233, 255);`: Sets the background color of the input elements to a light pink color.
+  - `padding: 5px;`: Adds 5 pixels of padding inside the input elements.
+
+```css
+label {
+  font-weight: bold;
+}
+```
+- `label`: This selector targets all `<label>` elements.
+  - `font-weight: bold;`: Makes the text inside the label elements bold.
+
+```css
+#btn-con {
+  text-align: center;
+}
+```
+- `#btn-con`: This selector targets the element with the ID `btn-con`.
+  - `text-align: center;`: Centers the text and child elements inside this container.
+
+```css
+.btn {
+  padding: 10px 25px;
+  font-family: sans-serif;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: rgb(224, 120, 212);
+  border: solid 2px rgb(224, 120, 212);
+}
+```
+- `.btn`: This selector targets elements with the class `btn`.
+  - `padding: 10px 25px;`: Adds 10 pixels of padding at the top and bottom and 25 pixels at the left and right inside the button.
+  - `font-family: sans-serif;`: Sets the font family of the button text to sans-serif.
+  - `border: none;`: Removes the default border of the button.
+  - `font-size: 20px;`: Sets the font size of the button text to 20 pixels.
+  - `border-radius: 4px;`: Rounds the corners of the button by 4 pixels.
+  - `background-color: rgb(224, 120, 212);`: Sets the background color of the button to a medium purple color.
+  - `border: solid 2px rgb(224, 120, 212);`: Adds a 2-pixel solid border to the button with the same color as the background.
+
+```css
+.btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+```
+- `.btn:hover`: This selector targets elements with the class `btn` when they are being hovered over by the mouse pointer.
+  - `cursor: pointer;`: Changes the cursor to a pointer (hand icon) when hovering over the button.
+  - `background-color: transparent;`: Makes the background color of the button transparent when hovered over.
+
+```css
+#received-container {
+  display: none;
+  text-align: center;
+}
+```
+- `#received-container`: This selector targets the element with the ID `received-container`.
+  - `display: none;`: Hides the element by default.
+  - `text-align: center;`: Centers the text and child elements inside this container.
+
+```css
+#received-container textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  resize: none;
+  border-radius: 8px;
+}
+```
+- `#received-container textarea`: This selector targets `<textarea>` elements that are children of the element with the ID `received-container`.
+  - `font-family: inherit;`: Inherits the font family from the parent element.
+  - `font-size: 1rem;`: Sets the font size to 1 rem (relative to the root element's font size).
+  - `font-weight: bold;`: Makes the text inside the textarea bold.
+  - `resize: none;`: Disables the resize handle on the textarea.
+  - `border-radius: 8px;`: Rounds the corners of the textarea by 8 pixels.
+
+### Summary
+
+This CSS code styles various elements of the HTML document to create a visually appealing and user-friendly form. The body has a specific background color and font, the header text is centered, the main content has margins, and the form elements have specific colors, padding, margins, and border styles. The submit button has specific padding, font, and color properties, with a hover effect that changes its background color and cursor. The `received-container` is initially hidden and has centered text and child elements, and any textareas within it inherit font properties, are bold, have rounded corners, and cannot be resized.
+  */

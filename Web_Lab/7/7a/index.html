@@ -1,0 +1,174 @@
+<!DOCTYPE html>  
+<html lang = "en">  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title> JavaScript Calculator </title>
+        <link rel="stylesheet" href="style.css">
+    </head>  
+    <body>  
+    	<center>
+        <h1> Calculator</h1>  
+        <table class="cal" >
+            <tr>
+                <td colspan="2"><input name="result" class="display-box" type="text" id="result" placeholder="Enter Expression" /> </td>   
+                <td > <input type="button" value="Clear" onclick="clearScreen()" id="btn" class="clear"  /> </td>
+                <td > <input type="button" value="Delete" onclick="deleteChar()" id="btn"  /> </td>
+            </tr>
+            <tr>
+                
+                <td> <input type="button" value="7" onclick="display('7')" /> </td>
+                <td> <input type="button" value="8" onclick="display('8')" /> </td>
+                <td> <input type="button" value="9" onclick="display('9')" /> </td>
+                
+                <td> <input type="button" value="+" onclick="display('+')" /> </td>
+                
+            </tr>
+            <tr>
+                <td> <input type="button" value="4" onclick="display('4')" /> </td>
+                <td> <input type="button" value="5" onclick="display('5')" /> </td>
+                <td> <input type="button" value="6" onclick="display('6')" /> </td>
+                <td> <input type="button" value="-" onclick="display('-')" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="1" onclick="display('1')" /> </td>
+                <td> <input type="button" value="2" onclick="display('2')" /> </td>
+                <td> <input type="button" value="3" onclick="display('3')" /> </td>
+                <td> <input type="button" value="*" onclick="display('*')" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="." onclick="display('.')" /> </td>
+                <td> <input type="button" value="0" onclick="display('0')" /> </td>
+                <td> <input type="button" value="/" onclick="display('/')" /> </td>
+                <td> <input type="button" value="=" onclick="calculate()" id="sub" /> </td>
+            </tr>
+        </table>
+        </center>
+        <script src="./script.js">
+           
+        </script>
+    </body>  
+</html>
+<!--
+    
+### HTML Document Structure
+
+```html
+<!DOCTYPE html>  
+<html lang="en">  
+```
+
+- `<!DOCTYPE html>`: This declaration defines the document type and version of HTML. It tells the browser to expect HTML5.
+- `<html lang="en">`: The opening `<html>` tag starts the HTML document, and the `lang="en"` attribute specifies the language of the document (English).
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title> JavaScript Calculator </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+```
+
+- `<head>`: This section contains meta-information about the HTML document.
+  - `<meta charset="UTF-8">`: Sets the character encoding for the document to UTF-8, which supports many characters and symbols from various languages.
+  - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Ensures the web page is responsive and sets the viewport to match the device's width and initial scale.
+  - `<title> JavaScript Calculator </title>`: Sets the title of the web page, which appears in the browser tab.
+  - `<link rel="stylesheet" href="style.css">`: Links to an external CSS file (`style.css`) for styling the web page.
+
+### Body of the Document
+
+```html
+<body>
+    <center>
+        <h1> Calculator</h1>
+        <table class="cal">
+```
+
+- `<body>`: The main content of the HTML document goes here.
+  - `<center>`: Centers the content inside it (deprecated in HTML5, but still works).
+  - `<h1> Calculator</h1>`: Adds a level 1 heading with the text "Calculator".
+  - `<table class="cal">`: Creates a table with the class `cal` for additional styling from the CSS.
+
+### Table Rows and Cells
+
+```html
+<tr>
+    <td colspan="2"><input name="result" class="display-box" type="text" id="result" placeholder="Enter Expression" /></td>
+    <td><input type="button" value="Clear" onclick="clearScreen()" id="btn" class="clear" /></td>
+    <td><input type="button" value="Delete" onclick="deleteChar()" id="btn" /></td>
+</tr>
+```
+
+- `<tr>`: Defines a table row.
+  - `<td colspan="2">`: Creates a table cell that spans two columns.
+    - `<input name="result" class="display-box" type="text" id="result" placeholder="Enter Expression" />`: Creates an input field with various attributes:
+      - `name="result"`: Names the input field.
+      - `class="display-box"`: Applies the `display-box` class for styling.
+      - `type="text"`: Specifies the type of input as text.
+      - `id="result"`: Assigns an ID for JavaScript reference.
+      - `placeholder="Enter Expression"`: Displays placeholder text inside the input box.
+  - `<td>`: Creates a table cell.
+    - `<input type="button" value="Clear" onclick="clearScreen()" id="btn" class="clear" />`: Creates a button:
+      - `type="button"`: Specifies the type as a button.
+      - `value="Clear"`: Displays "Clear" on the button.
+      - `onclick="clearScreen()"`: Calls the `clearScreen` function when clicked.
+      - `id="btn"`: Assigns an ID for styling or JavaScript reference.
+      - `class="clear"`: Applies the `clear` class for styling.
+
+```html
+<tr>
+    <td><input type="button" value="7" onclick="display('7')" /></td>
+    <td><input type="button" value="8" onclick="display('8')" /></td>
+    <td><input type="button" value="9" onclick="display('9')" /></td>
+    <td><input type="button" value="+" onclick="display('+')" /></td>
+</tr>
+```
+
+- Each `<td>` contains an `<input>` element of type `button`, displaying numbers or the `+` operator. The `onclick` attribute calls the `display` function with the respective value as an argument.
+
+### Additional Rows and Buttons
+
+The structure of the remaining rows is similar, each `<tr>` containing multiple `<td>` elements with buttons for digits and operators.
+
+```html
+<tr>
+    <td><input type="button" value="4" onclick="display('4')" /></td>
+    <td><input type="button" value="5" onclick="display('5')" /></td>
+    <td><input type="button" value="6" onclick="display('6')" /></td>
+    <td><input type="button" value="-" onclick="display('-')" /></td>
+</tr>
+<tr>
+    <td><input type="button" value="1" onclick="display('1')" /></td>
+    <td><input type="button" value="2" onclick="display('2')" /></td>
+    <td><input type="button" value="3" onclick="display('3')" /></td>
+    <td><input type="button" value="*" onclick="display('*')" /></td>
+</tr>
+<tr>
+    <td><input type="button" value="." onclick="display('.')" /></td>
+    <td><input type="button" value="0" onclick="display('0')" /></td>
+    <td><input type="button" value="/" onclick="display('/')" /></td>
+    <td><input type="button" value="=" onclick="calculate()" id="sub" /></td>
+</tr>
+```
+
+### Script Inclusion
+
+```html
+<script src="./script.js"></script>
+```
+
+- `<script src="./script.js"></script>`: Links to an external JavaScript file (`script.js`) that will contain the functions `clearScreen`, `deleteChar`, `display`, and `calculate`.
+
+### Closing Tags
+
+```html
+</center>
+</body>
+</html>
+```
+
+- Closes the `<center>` tag, the `<body>` tag, and finally the `<html>` tag, indicating the end of the document.
+
+This HTML structure creates a simple calculator layout with a display box and buttons for digits, operations, clear, delete, and equals. The actual functionality (e.g., displaying values, performing calculations) will be handled by the JavaScript file linked at the end of the document.
+-->

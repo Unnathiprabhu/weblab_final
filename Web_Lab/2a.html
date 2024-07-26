@@ -1,0 +1,508 @@
+<!-- Program Statement:
+  Create a form to collect Student feedback. (Use textbox, text area, 
+  checkbox, radio button, select box etc.).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+  font-family: sans-serif;
+  background-color: rgb(231, 175, 236);
+}
+
+header {
+  text-align: center;
+}
+
+#details {
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  margin: 50px 100px;
+}
+
+form {
+  background-color: rgb(241, 202, 244);
+  border-radius: 10px;
+  margin: 50px;
+  padding: 20px 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+#stu-details {
+  border-bottom: 2px solid black;
+}
+
+#stu-details input {
+  display: block;
+  margin: 10px 0px;
+  border: none;
+  width: 50%;
+  border-bottom: solid black 1px;
+  background-color: rgb(253, 233, 255);
+  padding: 5px;
+}
+
+#stu-details label, #ques-3-label, #sug-label {
+  font-weight: bold;
+}
+
+#feedback-ques select {
+  display: block;
+  margin: 15px 0px;
+  padding: 5px;
+  background-color: rgb(253, 233, 255);
+}
+
+#feedback-ques textarea {
+  display: block;
+  resize: none;
+  margin: 10px 0px;
+  background-color: rgb(253, 233, 255);
+}
+
+#sugg {
+  margin: 25px 0px;
+}
+
+button {
+  margin: 10px;
+}
+
+.btn {
+  padding: 10px 25px;
+  font-family: sans-serif;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+#submit {
+  background-color: rgb(224, 120, 212);
+  border: solid 2px rgb(224, 120, 212);
+}
+
+#btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+#clear {
+  background-color: transparent;
+  border: solid 2px black;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#clear:hover {
+  cursor: pointer;
+  background-color: rgb(224, 120, 212);
+}
+
+    </style>
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Student Feedback Form</h1>
+      <div id="details">
+        <h3>Faculty name: ...</h3>
+        <h3>Subject Code: ...</h3>
+        <h3>Subject Title: ...</h3>
+      </div>
+    </header>
+    <main>
+      <form action="/" method="POST">
+        <div id="stu-details">
+          <h3>Student Details</h3>
+          <ul class="sec">
+            <li>
+              <label for="stu-name">Name</label>
+              <input type="text" id="stu-name" required />
+            </li>
+            <li>
+              <label for="stu-mail">Email Address</label>
+              <input type="email" id="stu-mail" required />
+            </li>
+            <li>
+              <label for="usn">USN</label>
+              <input type="text" id="usn" required />
+            </li>
+            <li>
+              <label for="branch">Branch</label>
+              <input type="text" id="branch" required />
+            </li>
+            <li>
+              <label for="sem">Semester</label>
+              <input type="number" id="sem" max="8" min="1" required />
+            </li>
+            <li>
+              <label for="section">Section</label>
+              <input type="text" id="section" maxlength="1" required />
+            </li>
+          </ul>
+        </div>
+        <div id="feedback-ques">
+          <h3>Feedback Questions</h3>
+          <section>
+            <ul>
+              <li>
+                <h4>Was the teacher punctual to the class?</h4>
+              </li>
+              <li>
+                <input type="radio" value="1" id="op-1" name="ques-1">
+                <label for="op-1">Yes</label>
+              </li>
+              <li>
+                <input type="radio" value="2" id="op-2" name="ques-1">
+                <label for="op-2">No</label>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>
+                <h4>Was the teacher available for discussions and clearing doubts outside the class?</h4>
+              </li>
+              <li>
+                <input type="radio" value="1" id="opt-1" name="ques-2">
+                <label for="opt-1">Yes</label>
+              </li>
+              <li>
+                <input type="radio" value="2" id="opt-2" name="ques-2">
+                <label for="opt-2">No</label>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="ques-3" id="ques-3-label">What was your level of satisfaction with the teaching?</label>
+                <select name="ques-3" id="ques-3">
+                  <option value="1">Extemely Satisfying</option>
+                  <option value="2">Satisfying</option>
+                  <option value="3">Agreeable</option>
+                  <option value="4">Unsatisfying</option>
+                  <option value="5">Extremely Unsatisfying</option>
+                </select>
+              </li>
+              <li>
+                <h4>Was the teacher: (Select the applicable checkboxes) </h4>
+              </li>
+              <li>
+                <div>
+                  <input type="checkbox" value="1" name="ques-4" id="opti-1">
+                  <label for="opti-1">Helpful</label>
+                </div>
+                <div>
+                  <input type="checkbox" value="2" name="ques-4" id="opti-2">
+                  <label for="opti-2">Clear and Understandable</label>
+                </div>
+                <div>
+                  <input type="checkbox" value="3" name="ques-4" id="opti-3">
+                  <label for="opti-3">Knowledgeable</label>
+                </div>
+                <div>
+                  <input type="checkbox" value="4" name="ques-4" id="opti-4">
+                  <label for="opti-4">Interactive</label>
+                </div>
+              </li>
+              <li>
+                <h4>Do you want to submit the form?</h4>
+              </li>
+              <li>
+                <input type="checkbox" value="yes" name="agree" id="agree" required>
+                <label for="agree">Yes</label>
+              </li>
+              <li id="sugg">
+                <label for="suggestions" id="sug-label">Write your suggestions.</label>
+                <textarea name="suggestions" id="suggestions" cols="50" rows="4"></textarea>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div id="btn-div">
+          <button class="btn" id="submit">Submit</button>
+          <button type="reset" class="btn" id="clear">Clear</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
+<!--
+    Sure! Let's go through the provided HTML and CSS line by line, explaining each part in detail for someone who is not familiar with HTML, CSS, and JavaScript.
+
+### HTML Code
+
+#### `<!DOCTYPE html>`
+- This declaration defines the document type and version of HTML. It tells the browser that the document is an HTML5 document.
+
+#### `<html lang="en">`
+- The opening `<html>` tag defines the start of the HTML document. The `lang="en"` attribute specifies that the language of the document is English.
+
+#### `<head>`
+- The `<head>` section contains meta-information about the document, such as the character set, page title, and links to stylesheets.
+
+#### `<meta charset="UTF-8" />`
+- This meta tag specifies the character encoding for the HTML document. UTF-8 is a widely used character encoding that supports many characters from different languages.
+
+#### `<meta http-equiv="X-UA-Compatible" content="IE=edge" />`
+- This meta tag tells Internet Explorer to use the latest rendering engine available.
+
+#### `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`
+- This meta tag sets the viewport settings for responsive web design. It ensures the page is displayed correctly on different devices and screen sizes.
+
+#### `<style>`
+- The `<style>` tag contains CSS (Cascading Style Sheets) code that styles the HTML document. CSS is used to define the visual presentation of the webpage.
+
+#### `body { ... }`
+- The `body` selector styles the entire body of the HTML document.
+  - `font-family: sans-serif;`: Sets the font of the text to sans-serif.
+  - `background-color: rgb(231, 175, 236);`: Sets the background color of the body to a light purple color.
+
+#### `header { ... }`
+- The `header` selector styles the header section.
+  - `text-align: center;`: Centers the text inside the header.
+
+#### `#details { ... }`
+- The `#details` selector styles the element with the `id="details"`.
+  - `display: flex;`: Uses flexbox layout for the contents.
+  - `justify-content: space-around;`: Distributes the items evenly with space around them.
+
+#### `main { ... }`
+- The `main` selector styles the main content area.
+  - `margin: 50px 100px;`: Adds a margin of 50px on the top and bottom, and 100px on the left and right.
+
+#### `form { ... }`
+- The `form` selector styles the form element.
+  - `background-color: rgb(241, 202, 244);`: Sets the background color of the form to a light pink color.
+  - `border-radius: 10px;`: Rounds the corners of the form.
+  - `margin: 50px;`: Adds a margin of 50px around the form.
+  - `padding: 20px 50px;`: Adds padding inside the form.
+
+#### `ul { ... }`
+- The `ul` selector styles unordered lists.
+  - `list-style: none;`: Removes the default bullet points from the list.
+
+#### `#stu-details { ... }`
+- The `#stu-details` selector styles the element with the `id="stu-details"`.
+  - `border-bottom: 2px solid black;`: Adds a black bottom border.
+
+#### `#stu-details input { ... }`
+- The `#stu-details input` selector styles the input fields inside the student details section.
+  - `display: block;`: Makes each input field display as a block element.
+  - `margin: 10px 0px;`: Adds a margin of 10px on the top and bottom.
+  - `border: none;`: Removes the default border.
+  - `width: 50%;`: Sets the width to 50% of the parent element.
+  - `border-bottom: solid black 1px;`: Adds a black bottom border.
+  - `background-color: rgb(253, 233, 255);`: Sets the background color to a light pink color.
+  - `padding: 5px;`: Adds padding inside the input fields.
+
+#### `#stu-details label, #ques-3-label, #sug-label { ... }`
+- This selector styles the labels in the student details section and the labels with ids `ques-3-label` and `sug-label`.
+  - `font-weight: bold;`: Makes the text bold.
+
+#### `#feedback-ques select { ... }`
+- The `#feedback-ques select` selector styles the select dropdown in the feedback questions section.
+  - `display: block;`: Makes the select dropdown display as a block element.
+  - `margin: 15px 0px;`: Adds a margin of 15px on the top and bottom.
+  - `padding: 5px;`: Adds padding inside the dropdown.
+  - `background-color: rgb(253, 233, 255);`: Sets the background color to a light pink color.
+
+#### `#feedback-ques textarea { ... }`
+- The `#feedback-ques textarea` selector styles the textarea in the feedback questions section.
+  - `display: block;`: Makes the textarea display as a block element.
+  - `resize: none;`: Prevents resizing the textarea.
+  - `margin: 10px 0px;`: Adds a margin of 10px on the top and bottom.
+  - `background-color: rgb(253, 233, 255);`: Sets the background color to a light pink color.
+
+#### `#sugg { ... }`
+- The `#sugg` selector styles the suggestion section.
+  - `margin: 25px 0px;`: Adds a margin of 25px on the top and bottom.
+
+#### `button { ... }`
+- The `button` selector styles all buttons.
+  - `margin: 10px;`: Adds a margin of 10px around the buttons.
+
+#### `.btn { ... }`
+- The `.btn` class selector styles elements with the class `btn`.
+  - `padding: 10px 25px;`: Adds padding inside the buttons.
+  - `font-family: sans-serif;`: Sets the font to sans-serif.
+  - `border: none;`: Removes the default border.
+  - `font-size: 20px;`: Sets the font size to 20px.
+  - `border-radius: 4px;`: Rounds the corners of the buttons.
+
+#### `#submit { ... }`
+- The `#submit` selector styles the submit button.
+  - `background-color: rgb(224, 120, 212);`: Sets the background color to purple.
+  - `border: solid 2px rgb(224, 120, 212);`: Adds a purple border.
+
+#### `#btn-div { ... }`
+- The `#btn-div` selector styles the div containing the buttons.
+  - `display: flex;`: Uses flexbox layout.
+  - `justify-content: center;`: Centers the buttons horizontally.
+
+#### `#clear { ... }`
+- The `#clear` selector styles the clear button.
+  - `background-color: transparent;`: Sets the background to transparent.
+  - `border: solid 2px black;`: Adds a black border.
+
+#### `#submit:hover { ... }`
+- The `#submit:hover` selector styles the submit button when it is hovered over.
+  - `cursor: pointer;`: Changes the cursor to a pointer.
+  - `background-color: transparent;`: Sets the background to transparent.
+
+#### `#clear:hover { ... }`
+- The `#clear:hover` selector styles the clear button when it is hovered over.
+  - `cursor: pointer;`: Changes the cursor to a pointer.
+  - `background-color: rgb(224, 120, 212);`: Sets the background color to purple.
+
+#### `<title>Feedback Form</title>`
+- The `<title>` tag sets the title of the webpage, which is displayed in the browser tab.
+
+#### `<body>`
+- The `<body>` tag defines the start of the document's body, which contains all the content that will be displayed on the webpage.
+
+#### `<header>`
+- The `<header>` tag defines a header section for the document. This typically contains introductory content or navigational links.
+
+#### `<h1>Student Feedback Form</h1>`
+- The `<h1>` tag defines the main heading of the page.
+
+#### `<div id="details">`
+- This `<div>` tag defines a division or section of the document. The `id="details"` attribute uniquely identifies this division.
+
+#### `<h3>Faculty name: ...</h3>`
+- The `<h3>` tag defines a subheading. The text "Faculty name: ..." is a placeholder for the actual faculty name.
+
+#### `<h3>Subject Code: ...</h3>`
+- Similar to the previous `<h3>`, this one is a placeholder for the subject code.
+
+#### `<h3>Subject Title: ...</h3>`
+- Another `<h3>` tag serving as a placeholder for the subject title.
+
+#### `</header>`
+- This closes the `<header>` section.
+
+#### `<main>`
+- The `<main>` tag specifies the main content of the document. It should contain the dominant content of the `<body>`.
+
+#### `<form action="/" method="POST">`
+- The `<form>` tag defines the start of a form. `action="/"` specifies the URL to which the form data will be sent when submitted. `method="POST"` specifies that the form data should be sent using the POST method.
+
+#### `<div id="stu-details">`
+- This `<div>` contains the student details section
+
+.
+
+#### `<h3>Student Details</h3>`
+- A subheading for the student details section.
+
+#### `<ul class="sec">`
+- An unordered list with the class `sec`.
+
+#### `<li>`
+- Each `<li>` tag defines a list item within the unordered list.
+
+#### `<label for="stu-name">Name</label>`
+- The `<label>` tag provides a label for the input field with `id="stu-name"`.
+
+#### `<input type="text" id="stu-name" required />`
+- An input field of type `text`. The `id="stu-name"` attribute uniquely identifies this input field, and `required` means the field must be filled out before the form can be submitted.
+
+#### (Repeat similar structure for Email Address, USN, Branch, Semester, and Section)
+
+#### `<div id="feedback-ques">`
+- This `<div>` contains the feedback questions section.
+
+#### `<h3>Feedback Questions</h3>`
+- A subheading for the feedback questions section.
+
+#### `<section>`
+- The `<section>` tag groups related content together.
+
+#### `<ul>`
+- An unordered list within the section.
+
+#### `<li><h4>Was the teacher punctual to the class?</h4></li>`
+- A list item containing a sub-subheading (h4) for the first question.
+
+#### `<li><input type="radio" value="1" id="op-1" name="ques-1"><label for="op-1">Yes</label></li>`
+- A radio button input for the "Yes" option of the first question.
+
+#### `<li><input type="radio" value="2" id="op-2" name="ques-1"><label for="op-2">No</label></li>`
+- A radio button input for the "No" option of the first question.
+
+#### (Repeat similar structure for the second question)
+
+#### `<li><label for="ques-3" id="ques-3-label">What was your level of satisfaction with the teaching?</label>`
+- A label for the satisfaction level dropdown.
+
+#### `<select name="ques-3" id="ques-3">`
+- A dropdown select menu for the third question.
+
+#### `<option value="1">Extremely Satisfying</option>`
+- An option in the dropdown menu.
+
+#### (Repeat similar structure for other satisfaction levels)
+
+#### `<li><h4>Was the teacher: (Select the applicable checkboxes)</h4></li>`
+- A sub-subheading for the checkboxes question.
+
+#### `<div><input type="checkbox" value="1" name="ques-4" id="opti-1"><label for="opti-1">Helpful</label></div>`
+- A checkbox input for the "Helpful" option.
+
+#### (Repeat similar structure for other checkbox options)
+
+#### `<li><h4>Do you want to submit the form?</h4></li>`
+- A sub-subheading for the form submission confirmation.
+
+#### `<li><input type="checkbox" value="yes" name="agree" id="agree" required><label for="agree">Yes</label></li>`
+- A checkbox input for confirming form submission.
+
+#### `<li id="sugg"><label for="suggestions" id="sug-label">Write your suggestions.</label><textarea name="suggestions" id="suggestions" cols="50" rows="4"></textarea></li>`
+- A label and textarea for writing suggestions.
+
+#### `</section>`
+- Closes the section.
+
+#### `</div>`
+- Closes the feedback questions section.
+
+#### `<div id="btn-div">`
+- A division containing the buttons.
+
+#### `<button class="btn" id="submit">Submit</button>`
+- A submit button with the class `btn` and id `submit`.
+
+#### `<button type="reset" class="btn" id="clear">Clear</button>`
+- A reset button with the class `btn` and id `clear`.
+
+#### `</div>`
+- Closes the button division.
+
+#### `</form>`
+- Closes the form.
+
+#### `</main>`
+- Closes the main content area.
+
+#### `</body>`
+- Closes the body of the document.
+
+#### `</html>`
+- Closes the HTML document.
+
+This detailed explanation should help someone who doesn't know HTML, CSS, or JavaScript understand the structure and purpose of each part of the provided code.
+-->

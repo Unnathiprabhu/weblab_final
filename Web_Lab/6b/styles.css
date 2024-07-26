@@ -1,0 +1,184 @@
+
+  
+  .degree {
+    margin: 10px 0px;
+  }
+  
+  div p {
+    color: black;
+    font-style: normal;
+    font-size: 15px;
+    margin: 3px;
+  }
+  
+  .skill-list, .lang-list {
+    list-style: none;
+  }
+  
+  .skill-list li, .lang-list li {
+    display: inline-block;
+    border: solid 1px black;
+    background-color: whitesmoke;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  /*
+Let's break down this CSS code line by line to understand how it styles the HTML resume.
+
+### General Styling
+
+```css
+body {
+    font-family: sans-serif;
+}
+```
+
+- `body`: Targets the `<body>` element of the HTML document.
+  - `font-family: sans-serif;`: Sets the font family for the entire document to sans-serif, which makes the text clean and modern-looking.
+
+### Main Layout
+
+```css
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+```
+
+- `main`: Targets the `<main>` element.
+  - `display: flex;`: Uses Flexbox for layout, enabling flexible and responsive design.
+  - `justify-content: space-evenly;`: Distributes space evenly between and around the flex items.
+  - `margin: 50px;`: Adds a 50-pixel margin around the entire main content.
+
+### Section Widths
+
+```css
+#sec-1 {
+    width: 50%;
+}
+  
+#sec-2 {
+    width: 25%;
+}
+```
+
+- `#sec-1`: Targets the section with `id="sec-1"`.
+  - `width: 50%;`: Sets the width of this section to 50% of the container's width.
+- `#sec-2`: Targets the section with `id="sec-2"`.
+  - `width: 25%;`: Sets the width of this section to 25% of the container's width.
+
+### Heading Styles
+
+```css
+h1 {
+    font-size: 60px;
+    margin: 0;
+}
+```
+
+- `h1`: Targets all `<h1>` elements.
+  - `font-size: 60px;`: Sets the font size to 60 pixels.
+  - `margin: 0;`: Removes any default margin around the heading.
+
+### Paragraph and Degree Styles
+
+```css
+section p, .degree {
+    color: rgb(45, 44, 44);
+    font-size: 17px;
+    font-style: italic;
+}
+```
+
+- `section p, .degree`: Targets all `<p>` elements inside `<section>` elements and elements with the class `degree`.
+  - `color: rgb(45, 44, 44);`: Sets the text color to a dark gray.
+  - `font-size: 17px;`: Sets the font size to 17 pixels.
+  - `font-style: italic;`: Makes the text italic.
+
+### Subheading Styles
+
+```css
+h3 {
+    font-size: 22px;
+    color: rgb(26, 26, 151);
+}
+  
+h4 {
+    font-size: 18px;
+    margin: 15px 0px;
+}
+```
+
+- `h3`: Targets all `<h3>` elements.
+  - `font-size: 22px;`: Sets the font size to 22 pixels.
+  - `color: rgb(26, 26, 151);`: Sets the text color to a deep blue.
+- `h4`: Targets all `<h4>` elements.
+  - `font-size: 18px;`: Sets the font size to 18 pixels.
+  - `margin: 15px 0px;`: Adds a margin of 15 pixels above and below the element.
+
+### Degree Class Style
+
+```css
+.degree {
+    margin: 10px 0px;
+}
+```
+
+- `.degree`: Targets elements with the class `degree`.
+  - `margin: 10px 0px;`: Adds a margin of 10 pixels above and below these elements.
+
+### General Paragraph Styles
+
+```css
+div p {
+    color: black;
+    font-style: normal;
+    font-size: 15px;
+    margin: 3px;
+}
+```
+
+- `div p`: Targets all `<p>` elements inside `<div>` elements.
+  - `color: black;`: Sets the text color to black.
+  - `font-style: normal;`: Ensures the text is not italic.
+  - `font-size: 15px;`: Sets the font size to 15 pixels.
+  - `margin: 3px;`: Adds a 3-pixel margin around the elements.
+
+### Skill and Language List Styles
+
+```css
+.skill-list, .lang-list {
+    list-style: none;
+}
+```
+
+- `.skill-list, .lang-list`: Targets elements with the classes `skill-list` and `lang-list`.
+  - `list-style: none;`: Removes the default bullet points from the lists.
+
+### Skill and Language List Item Styles
+
+```css
+.skill-list li, .lang-list li {
+    display: inline-block;
+    border: solid 1px black;
+    background-color: whitesmoke;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+```
+
+- `.skill-list li, .lang-list li`: Targets list items within elements with the classes `skill-list` and `lang-list`.
+  - `display: inline-block;`: Makes the list items display inline but behave like block elements.
+  - `border: solid 1px black;`: Adds a solid black border with a thickness of 1 pixel.
+  - `background-color: whitesmoke;`: Sets the background color to a light gray (whitesmoke).
+  - `margin: 5px;`: Adds a 5-pixel margin around each list item.
+  - `padding: 10px;`: Adds 10 pixels of padding inside each list item.
+  - `text-align: center;`: Centers the text within each list item.
+  - `border-radius: 8px;`: Rounds the corners of the border with an 8-pixel radius.
+
+This CSS provides a clean and modern layout for the resume, using Flexbox for structure and various styling rules to enhance readability and aesthetics.*/

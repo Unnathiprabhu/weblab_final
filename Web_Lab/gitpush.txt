@@ -1,0 +1,95 @@
+If you want to add all the files and folders in your current directory to the Git repository, you can use the `git add .` command. This command stages all changes in the current directory and its subdirectories for the next commit.
+
+Here's a complete sequence of commands to initialize the repository, add all files and folders, commit the changes, and push to GitHub:
+
+### Full Command Sequence to Add All Files and Folders
+
+1. Initialize the Git repository:
+
+   ```sh
+   git init
+   ```
+
+2. Add all files and folders:
+
+   ```sh
+   git add .
+   ```
+
+3. Commit the changes:
+
+   ```sh
+   git commit -m "first commit"
+   ```
+
+4. Rename the current branch to `main`:
+
+   ```sh
+   git branch -M main
+   ```
+
+5. Add the remote repository:
+
+   ```sh
+   git remote add origin https://github.com/Unnathiprabhu/Web_Lab.git
+   ```
+
+6. Push the changes to the `main` branch on GitHub:
+
+   ```sh
+   git push -u origin main
+   ```
+
+### Detailed Explanation
+
+1. **Initialize the Repository:**
+
+   ```sh
+   git init
+   ```
+
+   This initializes a new Git repository in your current directory.
+
+2. **Add All Files and Folders:**
+
+   ```sh
+   git add .
+   ```
+
+   This stages all files and folders in the current directory for the next commit. The `.` is a shorthand for the current directory.
+
+3. **Commit the Changes:**
+
+   ```sh
+   git commit -m "first commit"
+   ```
+
+   This commits the staged changes with a message "first commit".
+
+4. **Rename the Branch to `main`:**
+
+   ```sh
+   git branch -M main
+   ```
+
+   This renames the current branch to `main`.
+
+5. **Add the Remote Repository:**
+
+   ```sh
+   git remote add origin https://github.com/Unnathiprabhu/Web_Lab.git
+   ```
+
+   This adds a remote repository called `origin` with the specified URL.
+
+6. **Push to GitHub:**
+
+   ```sh
+   git push -u origin main
+   ```
+
+   This pushes the changes to the `main` branch of the remote repository. The `-u` option sets `origin/main` as the upstream branch for the current local branch.
+
+### Summary
+
+By following these steps, you will add all the files and folders in your current directory to the Git repository, commit them, and push them to the remote repository on GitHub. This ensures that everything in your project directory is tracked and uploaded to GitHub.

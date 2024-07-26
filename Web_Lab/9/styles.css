@@ -1,0 +1,193 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(231, 175, 236);
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  main {
+    margin: 50px 200px;
+  }
+  
+  form, #received-container {
+    background-color: rgb(241, 202, 244);
+    border-radius: 10px;
+    margin: 50px;
+    padding: 20px 50px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  input {
+    display: block;
+    margin: 10px 0px;
+    border: none;
+    width: 75%;
+    border-bottom: solid black 1px;
+    background-color: rgb(253, 233, 255);
+    padding: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  #btn-con {
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 10px 25px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: rgb(224, 120, 212);
+    border: solid 2px rgb(224, 120, 212);
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+
+
+
+
+  /* Sure! Let's go through this CSS code line by line to explain how it styles the HTML document.
+
+### Line-by-Line Explanation
+
+```css
+body {
+  font-family: sans-serif;
+  background-color: rgb(231, 175, 236);
+}
+```
+- `body`: This selector targets the entire body of the HTML document.
+  - `font-family: sans-serif;`: Sets the font family to sans-serif, a type of font without small projecting features at the end of strokes.
+  - `background-color: rgb(231, 175, 236);`: Sets the background color of the page to a light purple color using RGB (Red, Green, Blue) values.
+
+```css
+header {
+  text-align: center;
+}
+```
+- `header`: This selector targets the header element.
+  - `text-align: center;`: Centers the text within the header.
+
+```css
+main {
+  margin: 50px 200px;
+}
+```
+- `main`: This selector targets the main element.
+  - `margin: 50px 200px;`: Sets the margin (space outside the element) to 50 pixels on the top and bottom, and 200 pixels on the left and right.
+
+```css
+form, #received-container {
+  background-color: rgb(241, 202, 244);
+  border-radius: 10px;
+  margin: 50px;
+  padding: 20px 50px;
+}
+```
+- `form, #received-container`: This selector targets both the form element and any element with the ID `received-container`.
+  - `background-color: rgb(241, 202, 244);`: Sets the background color to a light pink.
+  - `border-radius: 10px;`: Rounds the corners of the element by 10 pixels.
+  - `margin: 50px;`: Sets the margin to 50 pixels on all sides.
+  - `padding: 20px 50px;`: Sets the padding (space inside the element) to 20 pixels on the top and bottom, and 50 pixels on the left and right.
+
+```css
+ul {
+  list-style: none;
+}
+```
+- `ul`: This selector targets unordered list elements.
+  - `list-style: none;`: Removes the default bullet points from the list items.
+
+```css
+input {
+  display: block;
+  margin: 10px 0px;
+  border: none;
+  width: 75%;
+  border-bottom: solid black 1px;
+  background-color: rgb(253, 233, 255);
+  padding: 5px;
+}
+```
+- `input`: This selector targets all input elements.
+  - `display: block;`: Makes the input element a block-level element, which takes up the full width available.
+  - `margin: 10px 0px;`: Sets the margin to 10 pixels on the top and bottom, and 0 pixels on the left and right.
+  - `border: none;`: Removes any default borders from the input element.
+  - `width: 75%;`: Sets the width of the input element to 75% of its containing element.
+  - `border-bottom: solid black 1px;`: Adds a 1-pixel solid black border to the bottom of the input element.
+  - `background-color: rgb(253, 233, 255);`: Sets the background color to a very light pink.
+  - `padding: 5px;`: Adds 5 pixels of padding inside the input element.
+
+```css
+label {
+  font-weight: bold;
+}
+```
+- `label`: This selector targets all label elements.
+  - `font-weight: bold;`: Makes the text in label elements bold.
+
+```css
+#btn-con {
+  text-align: center;
+}
+```
+- `#btn-con`: This selector targets the element with the ID `btn-con`.
+  - `text-align: center;`: Centers the text within this element.
+
+```css
+.btn {
+  padding: 10px 25px;
+  font-family: sans-serif;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: rgb(224, 120, 212);
+  border: solid 2px rgb(224, 120, 212);
+}
+```
+- `.btn`: This selector targets all elements with the class `btn`.
+  - `padding: 10px 25px;`: Adds 10 pixels of padding on the top and bottom, and 25 pixels on the left and right.
+  - `font-family: sans-serif;`: Sets the font family to sans-serif.
+  - `border: none;`: Removes any default borders from the button.
+  - `font-size: 20px;`: Sets the font size to 20 pixels.
+  - `border-radius: 4px;`: Rounds the corners of the button by 4 pixels.
+  - `background-color: rgb(224, 120, 212);`: Sets the background color to a medium purple.
+  - `border: solid 2px rgb(224, 120, 212);`: Adds a 2-pixel solid border in the same color as the background.
+
+```css
+.btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+```
+- `.btn:hover`: This selector targets the `btn` elements when they are being hovered over by the mouse.
+  - `cursor: pointer;`: Changes the cursor to a pointer (hand icon), indicating that the element is clickable.
+  - `background-color: transparent;`: Makes the background color transparent when the button is hovered over.
+
+### Summary
+
+- **body**: Styles the entire page with a sans-serif font and a light purple background.
+- **header**: Centers the header text.
+- **main**: Adds margins around the main content.
+- **form, #received-container**: Styles both the form and a container with the ID `received-container` with a pink background, rounded corners, margin, and padding.
+- **ul**: Removes the default bullet points from unordered lists.
+- **input**: Styles input fields to be block-level, adds margin, removes default borders, sets width, adds a bottom border, sets background color, and adds padding.
+- **label**: Makes label text bold.
+- **#btn-con**: Centers the content inside the button container.
+- **.btn**: Styles buttons with padding, sans-serif font, no border, font size, rounded corners, background color, and border.
+- **.btn:hover**: Changes the cursor to a pointer and makes the background transparent when hovering over buttons.
+
+This CSS provides a consistent and visually appealing style for the registration form. */
